@@ -1,21 +1,11 @@
-doctype html
-
-html
-    head
-        title THyun's Blog	
-        meta(charset='utf-8') 		
-        meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=no') 	
-        style
-            include template/assets/css/main.css
-            noscript
-                include template/assets/css/noscript.css
-    body.is-preload
+extends ./layout
+block content
         // Page Wrapper
         #page-wrapper
             // Header
-            header#header.alt
+            header#header
                 h1
-                    a(href='index.html') Home
+                    a(href='/') Home
                 | 						
                 nav
                     a(href='#menu') Menu
@@ -29,10 +19,10 @@ html
                             a(href='index.html') Home
                         | 								
                         li
-                            a(href='/intro') Introduction
+                            a(href='generic.html') Generic
                         | 								
                         li
-                            a(href='elements.html') Ele
+                            a(href='elements.html') Elements
                         | 								
                         li
                             a(href='#') Log In
@@ -41,58 +31,25 @@ html
                             a(href='#') Sign Up
                     | 							
                     a.close(href='#') Close
-            // Banner
-            section#banner
-                .inner						
-                    h2 Welcome to visit my Blog
-                    | 							
-                    p
-                        | Interest In Networking, Server, BTS, Bboy
             // Wrapper
             section#wrapper
-                // One
-                section#one.wrapper.spotlight.style1
+                header
                     .inner
-                        a.image(href='#')
-                            img(src='images/pic01.jpg', alt='')
+                        h2 Generic
+                        | 								
+                        p Phasellus non pulvinar erat. Fusce tincidunt nisl eget ipsum.
+                // Content
+                .wrapper
+                    .inner
+                        h3.major Lorem ipsum dolor
                         | 									
-                        .content
-                            h2.major Who Am I?
-                            | 										
-                            p
-                                | Suwon 
-                            | 										
-                            a.special(href='#') Learn more
-                // Two
-                section#two.wrapper.alt.spotlight.style2
-                    .inner
-                        a.image(href='#')
-                            img(src='images/pic02.jpg', alt='')
+                        p
+                            | Morbi mattis mi consectetur tortor elementum, varius pellentesque velit convallis. Aenean tincidunt lectus auctor mauris maximus, ac scelerisque ipsum tempor. Duis vulputate ex et ex tincidunt, quis lacinia velit aliquet. Duis non efficitur nisi, id malesuada justo. Maecenas sagittis felis ac sagittis semper. Curabitur purus leo donec vel dolor at arcu tincidunt bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce ut aliquet justo. Donec id neque ipsum. Integer eget ultricies odio. Nam vel ex a orci fringilla tincidunt. Aliquam eleifend ligula non velit accumsan cursus. Etiam ut gravida sapien.
                         | 									
-                        .content
-                            h2.major Tempus adipiscing
-                            | 										
-                            p
-                                | Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.
-                            | 										
-                            a.special(href='#') Learn more
-                // Three
-                section#three.wrapper.spotlight.style3
-                    .inner
-                        a.image(href='#')
-                            img(src='images/pic03.jpg', alt='')
+                        p
+                            | Vestibulum ultrices risus velit, sit amet blandit massa auctor sit amet. Sed eu lectus sem. Phasellus in odio at ipsum porttitor mollis id vel diam. Praesent sit amet posuere risus, eu faucibus lectus. Vivamus ex ligula, tempus pulvinar ipsum in, auctor porta quam. Proin nec commodo, vel scelerisque nisi scelerisque. Suspendisse id quam vel tortor tincidunt suscipit. Nullam auctor orci eu dolor consectetur, interdum ullamcorper ante tincidunt. Mauris felis nec felis elementum varius.
                         | 									
-                        .content
-                            h2.major Nullam dignissim
-                            | 										
-                            p
-                                | Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.
-                            | 										
-                            a.special(href='#') Learn more
-                // Four
-                section#four.wrapper.alt.style1
-                    .inner
-                        h2.major Vitae phasellus
+                        h3.major Vitae phasellus
                         | 									
                         p
                             | Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.
@@ -119,32 +76,6 @@ html
                                     | Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.
                                 | 											
                                 a.special(href='#') Learn more
-                            | 										
-                            article
-                                a.image(href='#')
-                                    img(src='images/pic06.jpg', alt='')
-                                | 											
-                                h3.major Ante fermentum
-                                | 											
-                                p
-                                    | Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.
-                                | 											
-                                a.special(href='#') Learn more
-                            | 										
-                            article
-                                a.image(href='#')
-                                    img(src='images/pic07.jpg', alt='')
-                                | 											
-                                h3.major Fusce consequat
-                                | 											
-                                p
-                                    | Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.
-                                | 											
-                                a.special(href='#') Learn more
-                        | 									
-                        ul.actions
-                            li
-                                a.button(href='#') Browse All
             // Footer
             section#footer
                 .inner
@@ -201,11 +132,10 @@ html
                         li
                             | Design: 
                             a(href='http://html5up.net') HTML5 UP
-        // Scripts
         script
-            include template/assets/js/jquery.min.js
-            include template/assets/js/jquery.scrollex.min.js
-            include template/assets/js/browser.min.js
-            include template/assets/js/breakpoints.min.js
-            include template/assets/js/util.js
-            include template/assets/js/main.js
+            include assets/js/jquery.min.js
+            include assets/js/jquery.scrollex.min.js
+            include assets/js/browser.min.js
+            include assets/js/breakpoints.min.js
+            include assets/js/util.js
+            include assets/js/main.js
