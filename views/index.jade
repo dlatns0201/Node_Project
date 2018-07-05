@@ -5,7 +5,7 @@ block content
       // Header
       header#header.alt
           h1
-              a(href='/') Home
+              a(href='/#') Home
           | 						
           nav
               a(href='#menu') Menu
@@ -34,10 +34,14 @@ block content
       // Banner
       section#banner
           .inner						
-              h2 Welcome to visit my Blog
-              | 							
               p
-               | Interest In Networking, Server, BTS, Bboy, Street work out
+              h2 Welcome to visit my Blog							
+              p
+               a(href='#two') Back end Programmer In Networking, Server
+              p
+               a(href='#one') Interester In Street work out
+              p
+               a(href='#three') Hobbyist in Street Dance
       // Wrapper
       section#wrapper
           // One
@@ -47,11 +51,15 @@ block content
                       img(src='images/pic01.jpg' alt='dfdff')
                   | 									
                   .content
-                      h2.major Who Am I?
-                      | 										
+                      h2.major Exercise
                       p
-                          | Suwon 
-                      | 										
+                      | "A good spirit must be in a good body". This is my philosophy.
+                      br
+                      |Get my confidence while working out and relieve stress.
+                      br
+                      | I prefer agility and improvisation, so I'm doing Street work out, not weight
+                      br
+                      | it is probably related to dance and can do it anytime and anywhere.										
                       a.special(href='#') Learn more
           // Two
           section#two.wrapper.alt.spotlight.style2
@@ -60,10 +68,10 @@ block content
                       img(src='images/pic02.jpg', alt='')
                   | 									
                   .content
-                      h2.major Tempus adipiscing
+                      h2.major Studying
                       | 										
                       p
-                          | Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.
+                          | 크 모델이네 수색대 출신의 몸짱(이였던) 능력있는 프론트엔드 개발자십니다. 
                       | 										
                       a.special(href='#') Learn more
           // Three
@@ -72,17 +80,21 @@ block content
                   a.image(href='#')
                       img(src='images/pic03.jpg', alt='')
                   | 									
-                  .content
-                      h2.major Nullam dignissim
-                      | 										
-                      p
-                          | Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.
+                  .content(style='text-align: left')
+                      h2.major Dancing
+                      |  I like dance. among them mainly interested in street dance
+                      br
+                      | It's fun, but not hard, because you move while listening to the song
+                      br
+                      | The current main genre is bboy and I'm interested in krump, recently learning poppin
+                      br
+                      | I sometimes do K-pop when we can afford it, but only BTS's
                       | 										
                       a.special(href='#') Learn more
-          // Four
+          // Four 소속 인하대학교 컴공, 네트워크 연구실, 네터스, 움직임, 
           section#four.wrapper.alt.style1
               .inner
-                  h2.major Vitae phasellus
+                  h2.major Where I'm affiliated
                   | 									
                   p
                       | Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.
@@ -90,34 +102,32 @@ block content
                   section.features
                       article
                           a.image(href='#')
-                              img(src='images/pic04.jpg', alt='')
+                              img(src='images/inha.jpg', alt='')
                           | 											
-                          h3.major Sed feugiat lorem
+                          h3.major(style='text-transform: none') Inha Univ, Comp.Sci
                           | 											
                           p
-                              | Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.
+                              | 
                           | 											
                           a.special(href='#') Learn more
                       | 										
                       article
                           a.image(href='#')
-                              img(src='images/pic05.jpg', alt='')
+                              img(src='images/neters.jpg', alt='')
                           | 											
-                          h3.major Nisl placerat
+                          h3.major(style='text-transfrom: none') Neters
                           | 											
                           p
-                              | Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.
-                          | 											
+                          | 
                           a.special(href='#') Learn more
                       | 										
                       article
                           a.image(href='#')
-                              img(src='images/pic06.jpg', alt='')
+                              img(src='images/movin.jpg', alt='')
                           | 											
-                          h3.major Ante fermentum
+                          h3.major(style='text-transform: none') Movin Crew
                           | 											
                           p
-                              | Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.
                           | 											
                           a.special(href='#') Learn more
                       | 										
@@ -192,11 +202,11 @@ block content
                       | Design: 
                       a(href='http://html5up.net') HTML5 UP
   // Scripts
-  script
-      include assets/js/jquery.min.js
-      include assets/js/jquery.scrollex.min.js
-      include assets/js/browser.min.js
-      include assets/js/breakpoints.min.js
-      include assets/js/util.js
-      include assets/js/main.js
+  script(src='javascripts/jquery.min.js')
+  script(src='javascripts/jquery.scrollex.min.js')
+  script(src='javascripts/browser.min.js')
+  script(src='javascripts/breakpoints.min.js')
+  script(src='javascripts/util.js')
+  script(src='javascripts/main.js')
+
 

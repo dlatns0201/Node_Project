@@ -6,12 +6,14 @@ app.locals.pretty=true;
 app.set('port',process.env.PORT || 3000);
 app.set('views','./views');
 app.set('view engine', 'jade');
+app.use(express.static('public'));
 app.get('/',function(req,res){
     res.render('index');
 })
 app.get('/intro',function(req,res){
     res.render('intro');
 })
+
 app.listen(app.get('port'),function(){
     console.log('Success Connected: '+app.get('port'));
 })
