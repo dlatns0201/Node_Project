@@ -1,16 +1,211 @@
 doctype html
+
 html
- head
-     meta(charset='utf-8')
-     meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
-     style
-      include template/assets/css/main.css
-      include template/assets/js/jquery.min.js
-      include template/assets/js/jquery.scrollex.min.js
-      include template/assets/js/browser.min.js
-      include template/assets/js/breakpoints.min.js
-      include template/assets/js/util.js
-      include template/assets/js/main.js
-    title Hyun'Blog
- body
-    h1 hi it is my first project page with bootstrap
+    head
+        title THyun's Blog	
+        meta(charset='utf-8') 		
+        meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=no') 	
+        style
+            include template/assets/css/main.css
+            noscript
+                include template/assets/css/noscript.css
+    body.is-preload
+        // Page Wrapper
+        #page-wrapper
+            // Header
+            header#header.alt
+                h1
+                    a(href='index.html') Home
+                | 						
+                nav
+                    a(href='#menu') Menu
+            // Menu
+            nav#menu
+                .inner
+                    h2 Menu
+                    | 							
+                    ul.links
+                        li
+                            a(href='index.html') Home
+                        | 								
+                        li
+                            a(href='/intro') Introduction
+                        | 								
+                        li
+                            a(href='elements.html') Ele
+                        | 								
+                        li
+                            a(href='#') Log In
+                        | 								
+                        li
+                            a(href='#') Sign Up
+                    | 							
+                    a.close(href='#') Close
+            // Banner
+            section#banner
+                .inner						
+                    h2 Welcome to visit my Blog
+                    | 							
+                    p
+                        | Interest In Networking, Server, BTS, Bboy
+            // Wrapper
+            section#wrapper
+                // One
+                section#one.wrapper.spotlight.style1
+                    .inner
+                        a.image(href='#')
+                            img(src='images/pic01.jpg', alt='')
+                        | 									
+                        .content
+                            h2.major Who Am I?
+                            | 										
+                            p
+                                | Suwon 
+                            | 										
+                            a.special(href='#') Learn more
+                // Two
+                section#two.wrapper.alt.spotlight.style2
+                    .inner
+                        a.image(href='#')
+                            img(src='images/pic02.jpg', alt='')
+                        | 									
+                        .content
+                            h2.major Tempus adipiscing
+                            | 										
+                            p
+                                | Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.
+                            | 										
+                            a.special(href='#') Learn more
+                // Three
+                section#three.wrapper.spotlight.style3
+                    .inner
+                        a.image(href='#')
+                            img(src='images/pic03.jpg', alt='')
+                        | 									
+                        .content
+                            h2.major Nullam dignissim
+                            | 										
+                            p
+                                | Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.
+                            | 										
+                            a.special(href='#') Learn more
+                // Four
+                section#four.wrapper.alt.style1
+                    .inner
+                        h2.major Vitae phasellus
+                        | 									
+                        p
+                            | Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.
+                        | 									
+                        section.features
+                            article
+                                a.image(href='#')
+                                    img(src='images/pic04.jpg', alt='')
+                                | 											
+                                h3.major Sed feugiat lorem
+                                | 											
+                                p
+                                    | Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.
+                                | 											
+                                a.special(href='#') Learn more
+                            | 										
+                            article
+                                a.image(href='#')
+                                    img(src='images/pic05.jpg', alt='')
+                                | 											
+                                h3.major Nisl placerat
+                                | 											
+                                p
+                                    | Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.
+                                | 											
+                                a.special(href='#') Learn more
+                            | 										
+                            article
+                                a.image(href='#')
+                                    img(src='images/pic06.jpg', alt='')
+                                | 											
+                                h3.major Ante fermentum
+                                | 											
+                                p
+                                    | Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.
+                                | 											
+                                a.special(href='#') Learn more
+                            | 										
+                            article
+                                a.image(href='#')
+                                    img(src='images/pic07.jpg', alt='')
+                                | 											
+                                h3.major Fusce consequat
+                                | 											
+                                p
+                                    | Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.
+                                | 											
+                                a.special(href='#') Learn more
+                        | 									
+                        ul.actions
+                            li
+                                a.button(href='#') Browse All
+            // Footer
+            section#footer
+                .inner
+                    h2.major Get in touch
+                    | 							
+                    p
+                        | Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.
+                    | 							
+                    form(method='post', action='#')
+                        .fields
+                            .field
+                                label(for='name') Name
+                                | 										
+                                input#name(type='text', name='name')
+                            | 									
+                            .field
+                                label(for='email') Email
+                                | 										
+                                input#email(type='email', name='email')
+                            | 									
+                            .field
+                                label(for='message') Message
+                                | 										
+                                textarea#message(name='message', rows='4')
+                        | 								
+                        ul.actions
+                            li
+                                input(type='submit', value='Send Message')
+                    | 							
+                    ul.contact
+                        li.fa-home
+                            | Untitled Inc
+                            br
+                            | 									1234 Somewhere Road Suite #2894
+                            br
+                            | 									Nashville, TN 00000-0000
+                        | 								
+                        li.fa-phone (000) 000-0000
+                        | 								
+                        li.fa-envelope
+                            a(href='#') information@untitled.tld
+                        | 								
+                        li.fa-twitter
+                            a(href='#') twitter.com/untitled-tld
+                        | 								
+                        li.fa-facebook
+                            a(href='#') facebook.com/untitled-tld
+                        | 								
+                        li.fa-instagram
+                            a(href='#') instagram.com/untitled-tld
+                    | 							
+                    ul.copyright
+                        li © Untitled Inc. All rights reserved.
+                        li
+                            | Design: 
+                            a(href='http://html5up.net') HTML5 UP
+        // Scripts
+        script
+            include template/assets/js/jquery.min.js
+            include template/assets/js/jquery.scrollex.min.js
+            include template/assets/js/browser.min.js
+            include template/assets/js/breakpoints.min.js
+            include template/assets/js/util.js
+            include template/assets/js/main.js
