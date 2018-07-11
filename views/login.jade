@@ -1,0 +1,30 @@
+extends ./layout
+block content
+ header#header.alt
+          h1
+              a(href='/#') Home
+          | 						
+          nav
+              a(href='#menu') Menu
+   article#banner(style='padding-left: 200px')
+    form(action='/' method='post')
+     p
+      h1 ID 
+      input(type='text' name='id' placeholder='Input ID' style='width: 40%')
+     p
+      h1 Password
+      input(type='password' name='pwd' placeholder='Input PW' style='width:40%')
+     p
+      input(type='submit' )
+     p
+      a(href='/new') New Join
+
+
+
+
+    script(src='javascripts/jquery.min.js')
+    script(src='javascripts/jquery.scrollex.min.js')
+    script(src='javascripts/browser.min.js')
+    script(src='javascripts/breakpoints.min.js')
+    script(src='javascripts/util.js')
+    script(src='javascripts/main.js')

@@ -1,0 +1,10 @@
+메뉴
+
+Introduction - 자기소개/소속(소속설명의 링크)
+Interest - Street Work out / Bboy / BTS  //댓글기능
+study - Node JS / 논문정리 / Networking //댓글기능
+community 
+login
+
+로그인을 해야하만 댓글및 커뮤니티를 사용할 수 잇따
+로그인하여 관리인을 파악하여 intereset와 study를 수정 및 추가 삭제할수있다

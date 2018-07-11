@@ -1,0 +1,11 @@
+extends ./layout
+
+block content
+ h1 회원가입
+ form(action='/login', method='post')
+  p ID
+   input(type='text' name='new_id')
+  p PWD
+   input(type='password' name='new_pwd')
+  p
+   input(type='submit')
