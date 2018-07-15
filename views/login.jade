@@ -2,12 +2,12 @@ extends ./layout
 block content
  header#header.alt
           h1
-              a(href='/#') Home
+              a(href='/') Home
           | 						
           nav
               a(href='#menu') Menu
    article#banner(style='padding-left: 200px')
-    form(action='/' method='post')
+    form(action='/login' method='post')
      p
       h1 ID 
       input(type='text' name='id' placeholder='Input ID' style='width: 40%')
