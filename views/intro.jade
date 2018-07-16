@@ -8,7 +8,12 @@ block content
                     a(href='/') Home
                 | 						
                 nav
-                    a(href='#menu') Menu
+                    -if(user)
+                      span= 'User: '+user+'  /'
+                      a(href='/logout') LOGOUT
+                    -else
+                      a(href='/login') LOGIN
+                     a(href='#menu') Menu
             // Menu
             nav#menu
                 .inner
@@ -16,19 +21,17 @@ block content
                     | 							
                     ul.links
                         li
-                            a(href='index.html') Home
+                            a(href='/') Home
+                        
+                        li
+                            a(href='index.html') Interest
                         | 								
                         li
-                            a(href='generic.html') Generic
+                            a(href='generic.html') Study
                         | 								
                         li
-                            a(href='elements.html') Elements
+                            a(href='elements.html') Community
                         | 								
-                        li
-                            a(href='#') Log In
-                        | 								
-                        li
-                            a(href='#') Sign Up
                     | 							
                     a.close(href='#') Close
             // Wrapper

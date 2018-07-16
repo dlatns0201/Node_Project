@@ -43,7 +43,12 @@ app.get('/logout', function (req, res) {
     });
 })
 app.get('/intro', function (req, res) {
-    res.render('intro');
+    if (req.session.username) {
+        res.render('intro', { user: req.session.username });
+    }
+    else {
+        res.render('intro');
+    }
 })
 app.get('/new', function (req, res) {
     res.render('new');
