@@ -28,11 +28,9 @@ app.use(passport.session());
 app.get('/', function (req, res) {
     if (req.session.username) {
         res.render('index', { user: req.session.username });
-        console.log('aaaa');
     }
     else {
         res.render('index');
-        console.log('bbb');
     }
 })
 app.get('/login', function (req, res) {
