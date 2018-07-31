@@ -10,7 +10,7 @@ var FileStore = require('session-file-store')(session);
 var passport = require('passport');
 var LocalStrategy = require('passport-local').strategy;
 app.locals.pretty = true;
-app.set('port', process.env.PORT || 3000);
+app.set('port',process.env.PORT|| 3000);
 app.set('views', './views');
 app.set('view engine', 'jade');
 
