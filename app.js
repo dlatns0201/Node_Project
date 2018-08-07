@@ -142,14 +142,14 @@ passport.use(new localStrategy({
             var authenticated = user.authenticate(pwd, result.salt, result.hashed_password);
             if (authenticated) {
                 console.log('비밀번호가 일치합니다.');
-                callback(null, result);
+                return callback(null, result);
             } else {
                 console.log('비밀번호가 틀립니다.');
-                callback(null, false, { message: 'Incorrect Password!!' });
+                return callback(null, false, { message: 'Incorrect Password!!' });
             }
         } else {
             console.log('해당 이메일이 존재하지 않습니다.');
-            callback(null, false, { message: 'Incorrect ID!!' });
+            return callback(null, false, { message: 'Incorrect ID!!' });
         }
     });
 }))
@@ -250,7 +250,12 @@ app.get('/', function (req, res) {
     }
 })
 app.get('/login', function (req, res) {
-    res.render('login');
+    var fmsg=req.flash();
+    var feedback='';
+    if(fmsg.error){
+        feedback=fmsg.error[0];
+    }
+    res.render('login',{flash:feedback});
 });
 app.get('/facebook', passport.authenticate('facebook'));
 app.get('/facebook/callback', passport.authenticate('facebook', {
